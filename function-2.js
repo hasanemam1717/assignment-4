@@ -28,27 +28,3 @@ function checkName(name){
 }
 let dak =checkName('emA');
 console.log(dak);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// if(typeof name == String  ){
-    //     return 'right '
-    // }
-    // else {
-    //     return 'wrong'
-    // }
