@@ -1,21 +1,5 @@
-function calculateMoney(tiketNumber){
-    if( tiketNumber < 0){
-     return "Please enter a positive number"
-    }
-    else{
-     const tiketPrice =120;
-     const gatekeeperBill =500;
-     const stafFoodPrice =50;
-     const stafNumber =8;
-     const stafBillPerDay =stafFoodPrice*stafNumber;
-     const dailyMustCost =gatekeeperBill+stafBillPerDay;
-     const perDayIncome =tiketPrice*tiketNumber;
-     const remainingMoney = perDayIncome - dailyMustCost;
-     return remainingMoney;
-    }
- }
 
- function checkName(name){
+function checkName(name){
     if(typeof name !== "string"){
         return "invalid";
     }
@@ -42,3 +26,29 @@ function calculateMoney(tiketNumber){
            }
     }
 }
+let dak =checkName('emA');
+console.log(dak);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if(typeof name == String  ){
+    //     return 'right '
+    // }
+    // else {
+    //     return 'wrong'
+    // }
