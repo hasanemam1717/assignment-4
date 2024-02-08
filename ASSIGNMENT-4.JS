@@ -1,6 +1,6 @@
 function calculateMoney(tiketNumber){
     if( tiketNumber < 0){
-     return "Please enter a positive number"
+     return "Please enter a positive number."
     }
     else{
      const tiketPrice =120;
@@ -45,7 +45,7 @@ function calculateMoney(tiketNumber){
 
 function deleteInvalids(array){
     if(!Array.isArray(array)){
-        return '“Invalid Array” (you can give your own error message)';
+        return 'Please!Enter a array.';
     }
     else{
         let selection =[];
@@ -68,12 +68,35 @@ function password(object){
     }
     else if( !object.name ||!object.birthYear||!object.siteName){
         return "invaild"
-    }else if(typeof object.name !== 'string'|| typeof object.birthYear !== 'number' ){
+    }else if(typeof object.name !== 'string'|| typeof object.birthYear !== 'number'){
         return "invaild"
     }else if (object.birthYear.toString().length !== 4){
         return "invaild"
     }
     else {
-        return `${object.siteName.charAt(0).toUpperCase()}${object.siteName.slice(1)} #${object.name}@${object.birthYear}`;
+        return `${object.siteName.charAt(0).toUpperCase()}${object.siteName.slice(1)}#${object.name}@${object.birthYear}`;
     }
 }
+
+function monthlySavings(allPayments, livingCost) {
+    let math = 0 ;
+    if ( typeof livingCost !== "number" || !Array.isArray(allPayments)) {
+        return "invaild input"
+    }
+    for (let i = 0; i < allPayments.length; i++) {
+        const components = allPayments[i];
+        if (components >= 3000) {
+         let revenue = components * 20 / 100 ;
+         let currency = components - revenue ;
+            math = math + currency ;
+        }else{
+            math = math + components
+        }
+    }
+    if (math - livingCost >= 0) {
+        return math - livingCost ;
+    }else{
+        return "earn more"
+    }
+    
+  }
