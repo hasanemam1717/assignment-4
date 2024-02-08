@@ -1,22 +1,15 @@
-function deleteInvalids(array){
-    if(!Array.isArray(array)){
-        return '“Invalid Array” (you can give your own error message)'
-    }
-    else{
-        let  kajAse =[];
-        let  kajNai =[];
-        for(const element of array){
-            if(typeof element !== 'number' || isNaN(element) ){
-                 kajNai.push(element);
-            }
-            else{
-                 kajAse.push(element)
-            }
-        }
-        return  kajAse;
-    }
-    
-}
 
-const array = deleteInvalids({num: [ 1 , 2 , 3 ]});
-console.log(array)
+const myObject = {
+    name: 'kjajdhfjka',
+    age: 30458
+  };
+
+  console.log(myObject.name[0].toUpperCase())
+  
+//   if(myObject.age.toString().length === 5){
+//     console.log("5 disit")
+// }
+//   else{
+//     console.log('64 dislk')
+//   }let filterName =object.name[0].toUpperCase()
+    console.log(filterName)
